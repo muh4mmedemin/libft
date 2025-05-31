@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 12:53:07 by muayna            #+#    #+#             */
-/*   Updated: 2025/05/31 13:00:17 by muayna           ###   ########.fr       */
+/*   Updated: 2025/05/31 17:16:47 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,9 @@ char			*strnstr(const char *big, const char *little,
 char			*ft_strrchr(char const *s, int c);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
+char			*ft_substr(char const *s, unsigned int start,
+					unsigned long len);
+char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strtrim(char const *s1, char const *set);
 
 #endif

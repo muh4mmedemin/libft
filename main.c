@@ -3,5 +3,10 @@
 
 int	main(void)
 {
-	printf("%d", ft_isalpha('A'));
+	char	d[] = "ABCDEFGHJ";
+	char	e[] = "DHJ";
+	char	*s;
+
+	s = ft_strtrim(d, e);
+	printf("%s", s);
 }
