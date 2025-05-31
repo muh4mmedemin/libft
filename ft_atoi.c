@@ -6,12 +6,9 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 10:49:04 by muayna            #+#    #+#             */
-/*   Updated: 2025/05/30 17:04:57 by muayna           ###   ########.fr       */
+/*   Updated: 2025/05/31 12:35:24 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <stdlib.h>
 
 int	ft_atoi(const char *nptr)
 {

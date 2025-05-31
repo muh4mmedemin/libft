@@ -6,12 +6,11 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 13:39:51 by muayna            #+#    #+#             */
-/*   Updated: 2025/05/30 14:09:32 by muayna           ###   ########.fr       */
+/*   Updated: 2025/05/31 14:21:50 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
+#include <string.h>
 
 int	ft_strlcpy(char *dst, const char *src, unsigned int size)
 {
