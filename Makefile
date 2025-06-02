@@ -21,7 +21,10 @@ SRCS = ft_atoi.c \
 				ft_strnstr.c \
 				ft_strrchr.c \
 				ft_tolower.c \
-				ft_toupper.c 
+				ft_toupper.c \
+				ft_substr.c \
+				ft_strjoin.c \
+				ft_strtrim.c
 
 OBJ = $(SRCS:.c=.o)
 CC = cc
@@ -33,8 +36,8 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 		ar rc $(NAME) *.o
-
-MESSAGE = "Degistir"
+#This Area For git,
+MESSAGE = "Update library in c files"
 GADD = git add *
 GCOM = git commit -m $(MESSAGE)
 GPUSH = git push git@github.com:muh4mmedemin/libft.git 
@@ -43,6 +46,7 @@ gsend:
 	$(GADD) 
 	$(GCOM) 
 	$(GPUSH) 
+#This Area For git.
 
 .c.o:
 	cc		$(FLAG) -c $< -o $@

@@ -1,12 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/02 13:56:01 by muayna            #+#    #+#             */
+/*   Updated: 2025/06/02 13:56:02 by muayna           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdio.h>
 
 int	main(void)
 {
-	char	d[] = "ABCDEFGHJ";
-	char	e[] = "DHJ";
-	char	*s;
+	char	*str;
 
-	s = ft_strtrim(d, e);
-	printf("%s", s);
+	str = ft_substr("AWDSACXZ", 2, 123124);
+	printf("%s", str);
 }

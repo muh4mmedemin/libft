@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 16:38:02 by muayna            #+#    #+#             */
-/*   Updated: 2025/05/31 17:14:41 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/02 13:55:41 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,9 @@ char	*write(char *s1, char *set, char *trimmed)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *trimmed;
-	int i;
+	char	*trimmed;
+	int		i;
+
 	trimmed = malloc(length((char *)s1, (char *)set) + 1);
 	trimmed = write((char *)s1, (char *)set, trimmed);
 	i = ft_strlen(trimmed);

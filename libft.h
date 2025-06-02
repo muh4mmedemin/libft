@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 12:53:07 by muayna            #+#    #+#             */
-/*   Updated: 2025/05/31 17:16:47 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/02 17:52:12 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ unsigned int	ft_strlcat(char *restrict dst, const char *restrict src,
 int				ft_strlcpy(char *dst, const char *src, unsigned int size);
 int				ft_strlen(char *s);
 int				ft_strncmp(const char *s1, const char *s2, unsigned int n);
-char			*strnstr(const char *big, const char *little,
+char			*ft_strnstr(const char *big, const char *little,
 					unsigned long len);
 char			*ft_strrchr(char const *s, int c);
 int				ft_tolower(int c);
