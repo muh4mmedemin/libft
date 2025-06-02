@@ -34,6 +34,16 @@ all: $(NAME)
 $(NAME): $(OBJ)
 		ar rc $(NAME) *.o
 
+MESSAGE = "Degistir"
+GADD = git add *
+GCOM = git commit -m $(MESSAGE)
+GPUSH = git push git@github.com:muh4mmedemin/libft.git 
+
+gsend: 
+	$(GADD) 
+	$(GCOM) 
+	$(GPUSH) 
+
 .c.o:
 	cc		$(FLAG) -c $< -o $@
 
