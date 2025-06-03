@@ -6,23 +6,24 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 16:38:02 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/03 09:32:43 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/03 19:27:09 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-int		start(char *s1, char *set)
+int	start(char *s1, char *set)
 {
-	int i;
+	int	i;
+	int	b;
+	int	skipsize;
+	int	check;
+
 	i = 0;
-	int b;
-	int skipsize;
 	skipsize = 0;
-	int check;
-	while(s1[i])
+	while (s1[i])
 	{
 		b = 0;
 		check = 0;
@@ -37,20 +38,23 @@ int		start(char *s1, char *set)
 			b++;
 		}
 		if (check == 0)
-			return skipsize;
+			return (skipsize);
 	}
+	return (0);
 }
-int		end(char *s1, char *set, int s1_size)
+
+int	end(char *s1, char *set, int s1_size)
 {
-	int i;
-	int b;
+	int	i;
+	int	b;
+	int	check;
+
 	b = 0;
-	int check;
-	while(s1[b])
+	while (s1[b])
 	{
 		i = 0;
 		check = 0;
-		while(set[i])
+		while (set[i])
 		{
 			if (s1[s1_size - 1] == set[i])
 			{
@@ -61,8 +65,9 @@ int		end(char *s1, char *set, int s1_size)
 		}
 		b++;
 		if (check == 0)
-			return s1_size;
+			return (s1_size);
 	}
+	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -70,9 +75,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char *trimmed;
 	int i;
 	int malsize;
-	malsize = end((char *)s1, (char *)set, ft_strlen((char *)s1)) - start((char *)s1, (char *)set) + 1, sizeof(char);
-	i = 0;
 
+	malsize = end((char *)s1, (char *)set, ft_strlen((char *)s1))
+		- start((char *)s1, (char *)set) + 1;
+	i = 0;
 	trimmed = malloc(malsize);
 	while (i < malsize - 1)
 	{
@@ -80,14 +86,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	}
 	trimmed[i] = '\0';
-	printf("%d", i);
-	printf("%d", ft_strlen(trimmed));
-	return trimmed;
-
-	
-}
-
-int main ()
-{
-	printf("%s", ft_strtrim("H!ELLO!", "H"));
+	return (trimmed);
 }

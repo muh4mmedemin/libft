@@ -33,12 +33,12 @@ ARFLAGS = -rcs
 rm = rm -rf
 
 all: $(NAME)
-
+#*.o delete 
 $(NAME): $(OBJ)
-		ar rc $(NAME) *.o
+		ar rc $(NAME) *.o 
 #This Area For git,
-MESSAGE = "bug fix for ft_strtrim "
-GADD = git add *
+MESSAGE = "bug fix for ft_strtrim, update strnstr "
+GADD = git add .
 GCOM = git commit -m $(MESSAGE)
 GPUSH = git push git@github.com:muh4mmedemin/libft.git 
 
