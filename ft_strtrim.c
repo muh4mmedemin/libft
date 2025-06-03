@@ -6,76 +6,88 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 16:38:02 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/02 13:55:41 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/03 09:32:43 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <stdio.h>
 
-int	length(char *s1, char *set)
+int		start(char *s1, char *set)
 {
-	int	check;
-	int	sizemalloc;
-	int	b;
-	int	i;
-
+	int i;
 	i = 0;
-	b = 0;
-	sizemalloc = 0;
-	check = 0;
-	while (s1[i])
+	int b;
+	int skipsize;
+	skipsize = 0;
+	int check;
+	while(s1[i])
 	{
 		b = 0;
 		check = 0;
 		while (set[b])
 		{
 			if (set[b] == s1[i])
-				check++;
+			{
+				check = 1;
+				skipsize++;
+				i++;
+			}
 			b++;
 		}
 		if (check == 0)
-			sizemalloc++;
-		i++;
+			return skipsize;
 	}
-	return (sizemalloc);
 }
-
-char	*write(char *s1, char *set, char *trimmed)
+int		end(char *s1, char *set, int s1_size)
 {
-	int	check;
-	int	b;
-	int	i;
-
-	i = 0;
+	int i;
+	int b;
 	b = 0;
-	check = 0;
-	while (s1[i])
+	int check;
+	while(s1[b])
 	{
-		b = 0;
+		i = 0;
 		check = 0;
-		while (set[b])
+		while(set[i])
 		{
-			if (set[b] == s1[i])
-				check++;
-			b++;
+			if (s1[s1_size - 1] == set[i])
+			{
+				check = 1;
+				s1_size--;
+			}
+			i++;
 		}
+		b++;
 		if (check == 0)
-			trimmed[i] = s1[i];
-		i++;
+			return s1_size;
 	}
-	return (trimmed);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*trimmed;
-	int		i;
-
-	trimmed = malloc(length((char *)s1, (char *)set) + 1);
-	trimmed = write((char *)s1, (char *)set, trimmed);
-	i = ft_strlen(trimmed);
-	trimmed[i] = '\0';
-	return (trimmed);
+	char *trimmed;
+	int i;
+	int malsize;
+	malsize = end((char *)s1, (char *)set, ft_strlen((char *)s1)) - start((char *)s1, (char *)set) + 1, sizeof(char);
 	i = 0;
+
+	trimmed = malloc(malsize);
+	while (i < malsize - 1)
+	{
+		trimmed[i] = s1[start((char *)s1, (char *)set) + i];
+		i++;
+	}
+	trimmed[i] = '\0';
+	printf("%d", i);
+	printf("%d", ft_strlen(trimmed));
+	return trimmed;
+
+	
+}
+
+int main ()
+{
+	printf("%s", ft_strtrim("H!ELLO!", "H"));
 }

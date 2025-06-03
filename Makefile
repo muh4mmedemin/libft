@@ -37,7 +37,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 		ar rc $(NAME) *.o
 #This Area For git,
-MESSAGE = "Update library in c files"
+MESSAGE = "bug fix for ft_strtrim "
 GADD = git add *
 GCOM = git commit -m $(MESSAGE)
 GPUSH = git push git@github.com:muh4mmedemin/libft.git 
