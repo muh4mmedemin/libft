@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muayna < muayna@student.42istanbul.com.    +#+  +:+       +#+        */
+/*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 22:49:54 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/08 16:10:18 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/09 22:48:58 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char	**ft_split(char const *s, char c)
 	b = 0;
 	word_size = countw((char *)s, c);
 	i = 0;
-	str = malloc(word_size * sizeof(char *));
+	str = malloc((word_size + 1) * sizeof(char *));
 	while (i < word_size)
 	{
 		if (s[b] != c && s[b] != '\0')
@@ -74,17 +74,6 @@ char	**ft_split(char const *s, char c)
 		while (s[b] == c && s[b] != '\0')
 			b++;
 	}
+	str[i] = '\0';
 	return (str);
-}
-
-#include <stdio.h>
-int	main(void)
-{
-	int i = 0;
-	char** sa = ft_split(",AAAA,BBB,", ',');
-	while (i < 2)
-	{
-		printf("%s\n", sa[i]);
-		i++;
-	}
 }

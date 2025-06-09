@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 13:25:21 by muayna            #+#    #+#             */
-/*   Updated: 2025/05/31 14:20:51 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/09 22:45:13 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, unsigned int n)
 	while (i < n)
 	{
 		if (ptr[i] == (unsigned char)c)
-			return ((unsigned char *)&s[i]);
+			return ((unsigned char *)&ptr[i]);
 		i++;
 	}
 	return (NULL);
