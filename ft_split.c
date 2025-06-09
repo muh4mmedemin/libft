@@ -30,33 +30,61 @@ int	countw(char *s, char sep)
 	return (word);
 }
 
+char *char_malloc(char *s, char c)
+{
+	int size;
+	int size_temp;
+	char *temp;
+
+	size = 0;
+	while(s[size] != c && s[size] != '\0')
+		size++;
+	size_temp = size;
+	temp = malloc(size + 1);
+	temp[size] = '\0';
+	size = 0;
+	while (size < size_temp)
+	{
+		temp[size] = s[size];
+		size++;
+	}
+	return (temp);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		b;
-	int		e;
+	int		word_size;
 	char	**str;
 
-	e = 0;
+	b = 0;
+	word_size = countw((char *)s, c);
 	i = 0;
-	str = malloc(countw((char *)s, c) * sizeof(char *));
-	while (s[i])
+	str = malloc(word_size * sizeof(char *));
+	while (i < word_size)
 	{
-		if ((s[i] != c && s[i - 1] == c) || (s[0] != c))
+		if (s[b] != c && s[b] != '\0')
 		{
-			b = 0;
-			while (s[i + b] != c)
-			{
-				b++;
-			}
-			str[e] = malloc(b + 1);
-			e++;
+			str[i] = char_malloc((char *)&s[b], c);
 			i++;
 		}
-		i++;
+		while (s[b] != c && s[b] != '\0')
+			b++;
+		while (s[b] == c && s[b] != '\0')
+			b++;
 	}
+	return (str);
 }
+
+#include <stdio.h>
 int	main(void)
 {
-	ft_split("AAAA,BBB", ',');
+	int i = 0;
+	char** sa = ft_split(",AAAA,BBB,", ',');
+	while (i < 2)
+	{
+		printf("%s\n", sa[i]);
+		i++;
+	}
 }
