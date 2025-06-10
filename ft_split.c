@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 22:49:54 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/09 22:48:58 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/10 13:07:04 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,14 @@ int	countw(char *s, char sep)
 	return (word);
 }
 
-char *char_malloc(char *s, char c)
+char	*char_malloc(char *s, char c)
 {
-	int size;
-	int size_temp;
-	char *temp;
+	int		size;
+	int		size_temp;
+	char	*temp;
 
 	size = 0;
-	while(s[size] != c && s[size] != '\0')
+	while (s[size] != c && s[size] != '\0')
 		size++;
 	size_temp = size;
 	temp = malloc(size + 1);

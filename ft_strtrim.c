@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 16:38:02 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/03 19:27:09 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/10 13:07:27 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,9 @@ int	end(char *s1, char *set, int s1_size)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *trimmed;
-	int i;
-	int malsize;
+	char	*trimmed;
+	int		i;
+	int		malsize;
 
 	malsize = end((char *)s1, (char *)set, ft_strlen((char *)s1))
 		- start((char *)s1, (char *)set) + 1;
