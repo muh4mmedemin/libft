@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/28 09:26:15 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/11 13:32:18 by muayna           ###   ########.fr       */
+/*   Created: 2025/06/11 13:30:54 by muayna            #+#    #+#             */
+/*   Updated: 2025/06/11 15:47:43 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *s, int c, unsigned int n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int	i;
-	unsigned char	*ptr;
+	int	i;
 
-	ptr = (unsigned char *)s;
 	i = 0;
-	while (i != n)
+	while (s[i])
 	{
-		ptr[i] = c;
+		f(i, s);
 		i++;
 	}
-	return (s);
 }
