@@ -6,14 +6,16 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 14:26:04 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/03 17:36:24 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/12 20:41:15 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strnstr(const char *big, const char *little, unsigned long len)
+#include <stdlib.h>
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int	i;
-	int	ltlsize;
+	size_t	i;
+	int		ltlsize;
 
 	i = 0;
 	while (i < len)

@@ -6,13 +6,15 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 09:25:10 by muayna            #+#    #+#             */
-/*   Updated: 2025/05/31 14:20:18 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/12 20:30:06 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, unsigned int n)
+#include <stdlib.h>
+
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 	char			*ptr;
 
 	ptr = (char *)s;

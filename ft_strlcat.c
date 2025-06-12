@@ -6,16 +6,17 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 09:26:55 by muayna            #+#    #+#             */
-/*   Updated: 2025/05/28 09:27:21 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/12 20:35:24 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcat(char *restrict dst, const char *restrict src,
-		unsigned int dstsize)
+#include <stdlib.h>
+
+unsigned int	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int	dsize;
-	int	srcsize;
-	int	i;
+	int		dsize;
+	int		srcsize;
+	size_t	i;
 
 	dsize = 0;
 	srcsize = 0;

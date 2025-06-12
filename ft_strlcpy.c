@@ -6,16 +6,16 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 13:39:51 by muayna            #+#    #+#             */
-/*   Updated: 2025/05/31 14:21:50 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/12 20:33:58 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-int	ft_strlcpy(char *dst, const char *src, unsigned int size)
+int	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int	srcsize;
-	int	i;
+	int		srcsize;
+	size_t	i;
 
 	i = 0;
 	srcsize = 0;

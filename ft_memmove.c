@@ -6,15 +6,15 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 09:19:20 by muayna            #+#    #+#             */
-/*   Updated: 2025/05/31 14:21:26 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/12 20:32:46 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memmove(void *dest, const void *src, unsigned int n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int				i;
+	size_t				i;
 	unsigned char	*source;
 	unsigned char	*destination;
 
