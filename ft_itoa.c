@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muayna < muayna@student.42istanbul.com.    +#+  +:+       +#+        */
+/*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 01:13:47 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/07 16:37:13 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/13 13:33:12 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,9 @@ char	*ft_itoa(int n)
 	char	*str;
 	int		i;
 	int		b;
-	int		temp;
 
 	b = 1;
 	i = 1;
-	temp = n;
 	if (n < 0)
 	{
 		n *= -1;

@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 14:47:34 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/02 13:51:00 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/13 13:23:34 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, unsigned long len)
 {
-	char	*substr;
-	int		i;
-	int		b;
+	char			*substr;
+	int				i;
+	unsigned int	b;
 
 	b = ft_strlen((char *)s);
 	if (start >= len)

@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 09:26:55 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/12 20:35:24 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/13 13:20:33 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 unsigned int	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int		dsize;
+	size_t	dsize;
 	int		srcsize;
 	size_t	i;
 
