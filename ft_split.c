@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 22:49:54 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/10 13:07:04 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/14 11:44:53 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,6 @@ char	**ft_split(char const *s, char c)
 		while (s[b] == c && s[b] != '\0')
 			b++;
 	}
-	str[i] = '\0';
+	str[i] = NULL;
 	return (str);
 }
