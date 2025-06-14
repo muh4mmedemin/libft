@@ -6,13 +6,12 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 14:47:34 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/13 13:23:34 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/14 11:52:41 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <string.h>
 
 char	*ft_substr(char const *s, unsigned int start, unsigned long len)
 {
