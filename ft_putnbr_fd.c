@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 15:39:28 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/14 11:50:14 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/15 15:47:27 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n < 0)
+	if (n < 0 && (n != -2147483648))
 	{
 		n = -n;
 		write(fd, "-", 1);
@@ -23,5 +23,8 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		ft_putnbr_fd(n / 10, fd);
 	}
-	write(fd, &"0123456789"[n % 10], 1);
+	if(n != -2147483648)
+		write(fd, &"0123456789"[n % 10], 1);
+	else
+		write(fd, "-2147483648", 11);
 }

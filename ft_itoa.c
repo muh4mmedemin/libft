@@ -6,14 +6,14 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 01:13:47 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/15 09:10:18 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/15 15:32:39 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-int	mal_size(int n)
+static int	mal_size(int n)
 {
 	int	temp;
 	int	size;
@@ -28,7 +28,7 @@ int	mal_size(int n)
 	return (size);
 }
 
-char	*write(int n, char *str, int size)
+static char	*write(int n, char *str, int size)
 {
 	int	temp;
 
@@ -46,6 +46,10 @@ char	*write(int n, char *str, int size)
 
 char	*ft_itoa(int n)
 {
+	if (n == 0)
+		return	("0");
+	if (n == -2147483648)
+		return ("-2147483648");
 	char	*str;
 	int		i;
 	int		b;
@@ -59,12 +63,12 @@ char	*ft_itoa(int n)
 		b--;
 	}
 	str = malloc(mal_size(n) + i);
+	if (str == NULL)
+		return NULL;
 	str = write(n, str, mal_size(n) - b);
-	str[mal_size(n) + 1] = '\0';
+	if (str[0] == '-')
+		str[mal_size(n) + 1] = '\0';
+	else
+		str[mal_size(n)] = '\0';
 	return (str);
-}
-
-int	main()
-{
-	printf("%s", ft_itoa(0));
 }
