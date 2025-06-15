@@ -6,36 +6,30 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 09:26:55 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/13 13:20:33 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/15 10:24:58 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-unsigned int	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	dsize;
-	size_t	srcsize;
+	size_t	dst_len;
+	size_t	src_len;
 	size_t	i;
 
-	dsize = 0;
-	srcsize = 0;
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
 	i = 0;
-	while (src[srcsize])
-		srcsize++;
-	while (dst[dsize])
-		dsize++;
-	while (i < dstsize && src[i] && i < dstsize - dsize - 1)
+	if (dstsize == 0)
+		return (src_len);
+	if (dst_len >= dstsize)
+		return (dstsize + src_len);
+	while (src[i] && (dst_len + i) < dstsize - 1)
 	{
-		dst[dsize + i] = src[i];
+		dst[dst_len + i] = src[i];
 		i++;
 	}
-	if (dsize + i < dstsize)
-		dst[dsize + i] = '\0';
-	if (dsize >= dstsize)
-	{
-		return (srcsize + dstsize);
-	}
-	else
-		return (srcsize + dsize);
+	dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }

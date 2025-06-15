@@ -6,11 +6,12 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 01:13:47 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/13 13:33:12 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/15 09:10:18 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 int	mal_size(int n)
 {
@@ -61,4 +62,9 @@ char	*ft_itoa(int n)
 	str = write(n, str, mal_size(n) - b);
 	str[mal_size(n) + 1] = '\0';
 	return (str);
+}
+
+int	main()
+{
+	printf("%s", ft_itoa(0));
 }
