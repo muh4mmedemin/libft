@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int	countw(char *s, char sep)
 {
@@ -33,7 +33,8 @@ int	countw(char *s, char sep)
 
 int	chr_size(char *s, char sep, int *e)
 {
-	int size;
+	int	size;
+
 	while (s[*e])
 	{
 		while (s[*e] == sep)
@@ -43,24 +44,25 @@ int	chr_size(char *s, char sep, int *e)
 		{
 			(*e)++;
 			size++;
-			if(s[*e] == sep)
-				return size;
+			if (s[*e] == sep)
+				return (size);
 		}
 	}
-	return size;
+	return (size);
 }
 
-void fill (int *e, char *s, char sep, char **str)
+void	fill(int *e, char *s, char sep, char **str)
 {
-	int i;
-	int b;
+	int	i;
+	int	b;
+
 	i = 0;
 	while (str[i] != NULL)
 	{
-		while(s[*e] == sep)
+		while (s[*e] == sep)
 			(*e)++;
 		b = 0;
-		while(s[*e] != sep && s[*e] != '\0')
+		while (s[*e] != sep && s[*e] != '\0')
 		{
 			str[i][b] = s[*e];
 			(*e)++;
@@ -71,12 +73,12 @@ void fill (int *e, char *s, char sep, char **str)
 	}
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	int wr_size;
-	char **str;
-	int e;
-	int b;
+	int		wr_size;
+	char	**str;
+	int		e;
+	int		b;
 
 	b = 0;
 	e = 0;
@@ -90,13 +92,12 @@ char **ft_split(char const *s, char c)
 			while (b != -1)
 			{
 				b--;
-				free(str[b]);	
+				free(str[b]);
 			}
 		if (b == -1)
-			return NULL;
+			return (NULL);
 	}
 	e = 0;
 	fill(&e, (char *)s, c, str);
-	return str;
+	return (str);
 }
-
