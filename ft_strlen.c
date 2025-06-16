@@ -6,11 +6,13 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 13:39:18 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/12 20:17:31 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/16 17:20:30 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
+#include <stdlib.h>
+
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 

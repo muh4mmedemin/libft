@@ -6,20 +6,23 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 14:26:04 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/15 12:07:00 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/16 17:24:09 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-
+#include "libft.h"
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	int		ltlsize;
 
 	i = 0;
+	
 	if (little[0] == '\0')
 		return ((char *)big);
+	if (*big == 0)
+		return (NULL);
 	while (i < len)
 	{
 		ltlsize = 0;
@@ -33,5 +36,5 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

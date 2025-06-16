@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 09:27:50 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/15 11:30:44 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/16 16:04:21 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,15 @@
 char	*ft_strchr(char const *s, int c)
 {
 	int	i;
+	unsigned char	uc;
 
+	uc = (unsigned char)c;
 	i = 0;
-	if (c == '\0')
+	if (uc == '\0')
 		return ((char *)s + ft_strlen(s));
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == uc)
 		{
 			return ((char *)s + i);
 		}
