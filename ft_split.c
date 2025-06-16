@@ -6,14 +6,14 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 22:49:54 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/16 14:43:46 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/16 14:44:32 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int ft_free(char **str, int b)
+static int ft_free(char **str, int b)
 {
 	while(b != -1)
 	{
@@ -23,7 +23,7 @@ int ft_free(char **str, int b)
 	return 0;
 }
 
-int	countw(char *s, char sep)
+static int	countw(char *s, char sep)
 {
 	int	word;
 	int	i;
@@ -40,7 +40,7 @@ int	countw(char *s, char sep)
 	return (word);
 }
 
-int	chr_size(char *s, char sep, int *e)
+static int	chr_size(char *s, char sep, int *e)
 {
 	int	size;
 
@@ -60,7 +60,7 @@ int	chr_size(char *s, char sep, int *e)
 	return (size);
 }
 
-void	fill(int *e, char *s, char sep, char **str)
+static void	fill(int *e, char *s, char sep, char **str)
 {
 	int	i;
 	int	b;
