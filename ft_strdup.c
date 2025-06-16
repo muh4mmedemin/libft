@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dark <dark@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 12:36:21 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/11 13:29:20 by dark             ###   ########.fr       */
+/*   Updated: 2025/06/16 19:53:23 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strdup(const char *s)
 	while (s[srcsize])
 		srcsize++;
 	newstr = malloc(srcsize + 1);
+	if (newstr == NULL)
+		return NULL;
 	srcsize = 0;
 	while (s[srcsize])
 	{
