@@ -6,13 +6,22 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 22:49:54 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/16 14:30:45 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/16 14:43:46 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 #include <stdlib.h>
+
+int ft_free(char **str, int b)
+{
+	while(b != -1)
+	{
+		free(str[b]);
+		b--;
+	}
+	return 0;
+}
 
 int	countw(char *s, char sep)
 {
@@ -89,13 +98,8 @@ char	**ft_split(char const *s, char c)
 	{
 		str[b++] = malloc(chr_size((char *)s, c, &e) + 1);
 		if (str[b - 1] == NULL)
-			while (b != -1)
-			{
-				b--;
-				free(str[b]);
-			}
-		if (b == -1)
-			return (NULL);
+			if(!(ft_free(str, b)))
+				return NULL;
 	}
 	e = 0;
 	fill(&e, (char *)s, c, str);
