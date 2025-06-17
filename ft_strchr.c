@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
+#include <string.h>
 
 char	*ft_strchr(char const *s, int c)
 {
-	int	i;
+	int				i;
 	unsigned char	uc;
 
 	uc = (unsigned char)c;

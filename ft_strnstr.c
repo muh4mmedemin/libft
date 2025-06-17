@@ -10,15 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
+#include <stdlib.h>
+
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	int		ltlsize;
 
 	i = 0;
-	
 	if (little[0] == '\0')
 		return ((char *)big);
 	if (*big == 0)

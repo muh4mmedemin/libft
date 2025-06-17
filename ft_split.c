@@ -13,15 +13,15 @@
 #include "libft.h"
 #include <stdlib.h>
 
-static int ft_free(char **str, int b)
+static int	ft_free(char **str, int b)
 {
-	while(b != -1)
+	while (b != -1)
 	{
 		free(str[b]);
 		b--;
 	}
 	free(str);
-	return 0;
+	return (0);
 }
 
 static int	countw(char *s, char sep)
@@ -44,6 +44,7 @@ static int	countw(char *s, char sep)
 static int	chr_size(char *s, char sep, int *e)
 {
 	int	size;
+
 	size = 0;
 	while (s[*e])
 	{
@@ -95,15 +96,15 @@ char	**ft_split(char const *s, char c)
 	wr_size = countw((char *)s, c);
 	str = malloc(sizeof(char *) * (wr_size + 1));
 	if (str == NULL)
-		return NULL;
+		return (NULL);
 	str[wr_size] = NULL;
 	while (b < wr_size)
 	{
 		str[b] = malloc(chr_size((char *)s, c, &e) + 1);
 		if (str[b] == NULL)
 		{
-				ft_free(str, b);
-				return NULL;
+			ft_free(str, b);
+			return (NULL);
 		}
 		b++;
 	}

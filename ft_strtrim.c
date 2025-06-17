@@ -81,7 +81,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	trimmed = malloc(malsize);
 	if (trimmed == NULL)
-		return NULL;
+		return (NULL);
 	while (i < malsize - 1)
 	{
 		trimmed[i] = s1[start((char *)s1, (char *)set) + i];

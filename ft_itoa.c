@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 static int	mal_size(int n)
 {
@@ -47,14 +47,14 @@ static char	*write(int n, char *str, int size)
 
 char	*ft_itoa(int n)
 {
-	if (n == 0)
-		return	(ft_strdup("0"));
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
 	char	*str;
 	int		i;
 	int		b;
 
+	if (n == 0)
+		return (ft_strdup("0"));
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	b = 1;
 	i = 1;
 	if (n < 0)
@@ -65,7 +65,7 @@ char	*ft_itoa(int n)
 	}
 	str = malloc(mal_size(n) + i);
 	if (str == NULL)
-		return NULL;
+		return (NULL);
 	str = write(n, str, mal_size(n) - b);
 	if (str[0] == '-')
 		str[mal_size(n) + 1] = '\0';
