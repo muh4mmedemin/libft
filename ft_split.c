@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 22:49:54 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/17 13:19:07 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/17 17:49:18 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ static int ft_free(char **str, int b)
 		free(str[b]);
 		b--;
 	}
+	free(str);
 	return 0;
 }
 
@@ -43,7 +44,7 @@ static int	countw(char *s, char sep)
 static int	chr_size(char *s, char sep, int *e)
 {
 	int	size;
-
+	size = 0;
 	while (s[*e])
 	{
 		while (s[*e] == sep)
@@ -92,16 +93,19 @@ char	**ft_split(char const *s, char c)
 	b = 0;
 	e = 0;
 	wr_size = countw((char *)s, c);
-	str = malloc(8 * (wr_size + 1));
+	str = malloc(sizeof(char *) * (wr_size + 1));
 	if (str == NULL)
 		return NULL;
 	str[wr_size] = NULL;
 	while (b < wr_size)
 	{
-		str[b++] = malloc(chr_size((char *)s, c, &e) + 1);
-		if (str[b - 1] == NULL)
-			if(!(ft_free(str, b)))
+		str[b] = malloc(chr_size((char *)s, c, &e) + 1);
+		if (str[b] == NULL)
+		{
+				ft_free(str, b);
 				return NULL;
+		}
+		b++;
 	}
 	e = 0;
 	fill(&e, (char *)s, c, str);
