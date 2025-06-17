@@ -6,20 +6,19 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 14:10:40 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/14 13:03:03 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/17 13:16:38 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <string.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*p;
 	size_t	i;
-
-	if (size == 0)
-		return (NULL);
 	i = 0;
+
 	p = malloc(nmemb * size);
 	if (p == NULL)
 		return (NULL);

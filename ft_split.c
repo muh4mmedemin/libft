@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 22:49:54 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/16 14:44:32 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/17 13:19:07 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,8 @@ char	**ft_split(char const *s, char c)
 	e = 0;
 	wr_size = countw((char *)s, c);
 	str = malloc(8 * (wr_size + 1));
+	if (str == NULL)
+		return NULL;
 	str[wr_size] = NULL;
 	while (b < wr_size)
 	{

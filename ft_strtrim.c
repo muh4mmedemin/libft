@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 16:38:02 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/10 13:07:27 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/17 13:18:31 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		- start((char *)s1, (char *)set) + 1;
 	i = 0;
 	trimmed = malloc(malsize);
+	if (trimmed == NULL)
+		return NULL;
 	while (i < malsize - 1)
 	{
 		trimmed[i] = s1[start((char *)s1, (char *)set) + i];

@@ -6,12 +6,13 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 01:13:47 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/15 15:32:39 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/17 13:10:25 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 static int	mal_size(int n)
 {
@@ -47,9 +48,9 @@ static char	*write(int n, char *str, int size)
 char	*ft_itoa(int n)
 {
 	if (n == 0)
-		return	("0");
+		return	(ft_strdup("0"));
 	if (n == -2147483648)
-		return ("-2147483648");
+		return (ft_strdup("-2147483648"));
 	char	*str;
 	int		i;
 	int		b;

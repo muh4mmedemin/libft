@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 15:39:28 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/15 17:00:11 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/17 13:12:02 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putnbr_fd(int n, int fd)
 		n = -n;
 		write(fd, "-", 1);
 	}
-	if (n > 10)
+	if (n > 9)
 	{
 		ft_putnbr_fd(n / 10, fd);
 	}
