@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 12:53:07 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/19 11:04:10 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/19 20:35:45 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,13 @@ void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 typedef struct s_list
 {
-void *content;
-struct s_list *next;
-} t_list;
+	void *content;
+	struct s_list *next;
+} 		t_list;
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **lst, t_list *new);
 int				ft_lstsize(t_list *lst);
-void			ft_lstadd_front(t_list **lst, t_list *new);
+void			ft_lstadd_back(t_list **lst, t_list *new);
+			
 
 #endif
