@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 12:53:07 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/19 20:35:45 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/20 16:16:49 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,9 @@ t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **lst, t_list *new);
 int				ft_lstsize(t_list *lst);
 void			ft_lstadd_back(t_list **lst, t_list *new);
+void			ft_lstdelone(t_list *lst, void (*del)(void*));
+void			ft_lstclear(t_list **lst, void (*del)(void *));
+void			ft_lstiter(t_list *lst, void (*f)(void *));
 			
 
 #endif
