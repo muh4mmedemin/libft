@@ -6,12 +6,11 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 09:27:50 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/16 16:04:21 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/21 10:00:55 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 char	*ft_strchr(char const *s, int c)
 {

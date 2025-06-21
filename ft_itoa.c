@@ -6,12 +6,11 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 01:13:47 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/17 13:10:25 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/21 09:58:34 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 static int	mal_size(int n)
@@ -29,7 +28,7 @@ static int	mal_size(int n)
 	return (size);
 }
 
-static char	*write(int n, char *str, int size)
+static char	*ftwrite(int n, char *str, int size)
 {
 	int	temp;
 
@@ -66,7 +65,7 @@ char	*ft_itoa(int n)
 	str = malloc(mal_size(n) + i);
 	if (str == NULL)
 		return (NULL);
-	str = write(n, str, mal_size(n) - b);
+	str = ftwrite(n, str, mal_size(n) - b);
 	if (str[0] == '-')
 		str[mal_size(n) + 1] = '\0';
 	else

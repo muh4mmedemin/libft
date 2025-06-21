@@ -6,15 +6,14 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 16:38:02 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/17 13:18:31 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/21 10:02:26 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 #include <stdlib.h>
 
-int	start(char *s1, char *set)
+static int	start(char *s1, char *set)
 {
 	int	i;
 	int	b;
@@ -43,7 +42,7 @@ int	start(char *s1, char *set)
 	return (0);
 }
 
-int	end(char *s1, char *set, int s1_size)
+static int	end(char *s1, char *set, int s1_size)
 {
 	int	i;
 	int	b;

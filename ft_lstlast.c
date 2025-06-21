@@ -6,12 +6,11 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/19 10:29:47 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/19 11:00:37 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/21 09:59:27 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 t_list *ft_lstlast (t_list *lst)
 {
