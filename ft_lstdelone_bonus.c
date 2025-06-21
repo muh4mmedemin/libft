@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/30 14:10:40 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/21 13:40:58 by muayna           ###   ########.fr       */
+/*   Created: 2025/06/19 20:09:52 by muayna            #+#    #+#             */
+/*   Updated: 2025/06/21 09:58:58 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	void	*p;
-	size_t	i;
-
-	i = 0;
-	p = malloc(nmemb * size);
-	if (p == NULL)
-		return (NULL);
-	while (i <= nmemb * size)
-	{
-		((char *)p)[i] = '\0';
-		i++;
-	}
-	return (p);
+    del(lst->content);
+    free(lst);
 }
