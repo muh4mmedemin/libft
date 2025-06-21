@@ -6,13 +6,11 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/21 10:05:43 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/21 15:35:51 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/21 15:45:48 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
