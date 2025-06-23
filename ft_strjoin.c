@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 15:48:39 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/17 13:13:53 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/23 13:40:30 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		totalstr;
 
 	b = 0;
-	totalstr = 0;
 	i = 0;
 	totalstr = ft_strlen((char *)s1) + ft_strlen((char *)s2);
 	newstr = malloc(totalstr + 1);

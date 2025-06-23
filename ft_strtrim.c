@@ -6,7 +6,7 @@
 /*   By: muayna <muayna@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 16:38:02 by muayna            #+#    #+#             */
-/*   Updated: 2025/06/21 10:02:26 by muayna           ###   ########.fr       */
+/*   Updated: 2025/06/23 13:44:50 by muayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	int		malsize;
 
+	if (s1 == NULL)
+		return (ft_strdup(""));
+	if (set == NULL)
+		return (ft_strdup(s1));
 	malsize = end((char *)s1, (char *)set, ft_strlen((char *)s1))
 		- start((char *)s1, (char *)set) + 1;
 	i = 0;
